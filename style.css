@@ -4,19 +4,19 @@ html {
 }
 body {
     font-family: 'Handlee', cursive;
-    font-size: 13pt;
+    font-size: 10pt;
     background-color: #efefef;
     padding: 10px;
     margin: 0;
 }
-h1 {
-    font-size: 15pt;
+h4 {
+    font-size: 10pt;
     color: #20bcd5;
     text-align: center;
     padding: 18px 0 18px 0;
     margin: 0 0 10px 0;
 }
-h1 span {
+h4 span {
     border: 4px dashed #20bcd5;
     padding: 10px;
 }
@@ -29,7 +29,7 @@ p {
     border: 3px solid white;
     border-radius: 50%;
 }
-.section {
+.sect {
     background-color: #fff;
     padding: 15px;
     margin-bottom: 10px;
@@ -46,8 +46,8 @@ p {
     margin: auto;
 }
 #header p {
-    font-size: 25pt;
-    color: #3b464c;
+    font-size: 30pt;
+    color: #000000;
     padding-top: 5px;
     margin: 0;
     font-weight: bold;
@@ -154,7 +154,7 @@ input, textarea {
 #contacts img:hover {
     opacity: 0.8;
 }
-#contacts {
+#contacts, #home {
     text-align: center;
 }
 .copyright {
