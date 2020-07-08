@@ -1,22 +1,54 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>My Blog</title>
-        <link href="https://fonts.googleapis.com/css?family=Handlee" rel="stylesheet">
-        <link href="style.css" rel="stylesheet" type="text/css" />
-    </head>
-    
-    <body>
+
+<head>
+	<title>My Blog</title>
+	<link href="https://fonts.googleapis.com/css?family=Handlee" rel="stylesheet">
+	<link href="style.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	 crossorigin="anonymous">
+</head>
+
+<body>
+        <nav class="navbar navbar-expand-lg navbar-light sticky-top" id="home" style="background-color: #e3f2fd;">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <a class="nav-link" href="#home">Home <span class="sr-only"></span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about">About me</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#skills">Skills</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#media">Media</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact</a>
+              </li>
+            </ul>
+              <form class="form-inline">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+              </form>
+          </div>
+        </nav>
+
         <!-- header start -->
-        <div id="header" class="section">
+        <div id="header" class="sect bg-light" >
             <img alt="" class="img-circle" src="https://instagram.fala3-1.fna.fbcdn.net/v/t51.2885-19/s320x320/27574203_406235569815814_1119491304535883776_n.jpg?_nc_ht=instagram.fala3-1.fna.fbcdn.net&_nc_ohc=k21bLdevQvwAX9rhYSN&oh=848e02c7ea00e036c584abe3feaed319&oe=5F27FB4B">
             <p>Tahir</p>
         </div>
         <!-- header end -->
         
         <!-- About Me section start -->
-        <div class="section">
-            <h1><span>About Me</span></h1>
+        <div class="sect bg-light" id="about">
+            <h4><span>About Me</span></h4>
             <p>
                 Hey! I'm <strong>Tahir</strong>. Coding has changed my world. <br>Learning to code gave me problem-solving skills and a way to communicate with others on a technical level. <br>I can also develop <i>websites</i> and use my coding skills at work.
             </p>
@@ -24,8 +56,8 @@
         </div>
         <!-- About Me section end -->
         
-        <!-- My Schedule section start -->
-        <div class="section">
+        <!-- My Schedule section start 
+        <div class="sect" id="schedule">
             <h1><span>My Coding Schedule</span></h1>
             <table>
                 <tr>
@@ -78,12 +110,12 @@
                 </tr>
             </table>
         </div>
-        <!-- My Schedule section end -->
+         My Schedule section end -->
         
         
         <!-- My Skills section start -->
-        <div class="section">
-            <h1><span>My Skills</span></h1>
+        <div class="sect bg-light" id="skills">
+            <h4><span>My Skills</span></h4>
             <ul>
                 <li>Python <br />
                     <progress min="0" max="100" value="80"></progress>
@@ -100,15 +132,15 @@
         
         
          <!-- Media section start -->
-        <div class="section">
-            <h1><span>My Media</span></h1>
+        <div class="sect bg-light" id="media">
+            <h4><span>My Media</span></h4>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/APWhx97QvxE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
         <!-- Media section end -->
         
         <!-- Form section start -->
-       <div class="section">
-            <h1><span>Contact Me</span></h1>
+       <div class="sect bg-light" id="contact">
+            <h4><span>Contact Me</span></h4>
                  
             <form>
                 <input name="name" placeholder="Name" type="text" required /><br/>
@@ -120,10 +152,10 @@
         <!-- Form section end -->
         
         <!-- Contacts section start -->
-        <div class="section" id="contacts">
-            <h1><span>Follow Me</span></h1>
+        <div class="sect bg-light" id="contacts">
+            <h4><span>Follow Me</span></h4>
             <div>
-                <a href="https://github.com/Mh-Tahir" target="_blank">
+                <a href="https://github.com/Mh-Tahir">
                     <img alt="Github" src="https://image.flaticon.com/icons/svg/25/25231.svg" />
                 </a>
                 <a href="https://www.instagram.com/thrm__/">
@@ -136,6 +168,9 @@
         <div class="copyright">
             &copy; 2020 My Blog. All rights reserved.
         </div>
-        
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
+        </script>    
     </body>
 </html>
