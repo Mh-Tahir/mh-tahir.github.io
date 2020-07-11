@@ -1,43 +1,22 @@
-var input, search, pr, result, result_arr, locale_HTML, result_store;
+var map;
 
-function func() {
-  locale_HTML = document.body.innerHTML;   // сохраняем в переменную весь body (Первоначальный)
-}
-setTimeout(func, 1000);  //ждем подгрузки Jsona и выполняем
+DG.then(function () {
+  map = DG.map('map', {
+    center: [59.938887, 30.315058],
+    zoom: 2
+  });
 
-function FindOnPage(name, status) {
-
-  input = document.getElementById(name).value; //получаем значение из поля в html
-
-
-  function FindOnPageGo() {
-
-    search = '/' + input + '/g';  //делаем из строки регуярное выражение
-    pr = document.body.innerHTML;   // сохраняем в переменную весь body
-    result = pr.match(/>(.*?)</g);  //отсекаем все теги и получаем только текст
-    result_arr = [];   //в этом массиве будем хранить результат работы (подсветку)
-
-    var warning = true;
-    for (let i = 0; i < result.length; i++) {
-      if (result[i].match(eval(search)) != null) {
-        warning = false;
-      }
-    }
-    if (warning == true) {
-      alert('No matches found');
-    }
-
-    for (let i = 0; i < result.length; i++) {
-      result_arr[i] = result[i].replace(eval(search), '<span style="background-color:yellow;">' + input + '</span>'); //находим нужные элементы, задаем стиль и сохраняем в новый массив
-    }
-    for (let i = 0; i < result.length; i++) {
-      pr = pr.replace(result[i], result_arr[i])  //заменяем в переменной с html текст на новый из новогом ассива
-    }
-    document.body.innerHTML = pr;  //заменяем html код
-  }
-
-  function FindOnPageBack() { document.body.innerHTML = locale_HTML; }
-
-  if (status) { FindOnPageBack(); FindOnPageGo(); } //чистим прошлое и Выделяем найденное
-  if (!status) { FindOnPageBack(); } //Снимаем выделение
-}
+  DG.marker([61.227040, 102.342267]).addTo(map).bindPopup('Россия');
+  DG.marker([48.136207, 67.153550]).addTo(map).bindPopup('Казахстан');
+  DG.marker([53.139499, -1.685177]).addTo(map).bindPopup('Великобритания');
+  DG.marker([36.952915, -99.115868]).addTo(map).bindPopup('США');
+  DG.marker([44.954457, 10.349284]).addTo(map).bindPopup('Италия');
+  DG.marker([51.228764, 10.551692]).addTo(map).bindPopup('Германия');
+  DG.marker([62.723206, 25.933922]).addTo(map).bindPopup('Финляндия');
+  DG.marker([39.159964, -3.512808]).addTo(map).bindPopup('Испания');
+  DG.marker([58.564388, 25.660789]).addTo(map).bindPopup('Эстония');
+  DG.marker([23.602744, 54.057083]).addTo(map).bindPopup('ОАЭ');
+  DG.marker([39.056249, 35.302075]).addTo(map).bindPopup('Турция');
+  DG.marker([35.128223, 33.149774]).addTo(map).bindPopup('Кипр');
+  DG.marker([41.462166, 74.549461]).addTo(map).bindPopup('Киргизия');
+});
