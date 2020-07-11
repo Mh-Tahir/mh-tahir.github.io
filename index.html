@@ -7,15 +7,16 @@
 	<link href="style.css" rel="stylesheet" type="text/css" />
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
 	 crossorigin="anonymous">
-	<script src="script.js"></script>    
+	<script src="https://maps.api.2gis.ru/2.0/loader.js?pkg=full">
+	</script>
 </head>
 
 <body>
-        <nav class="navbar navbar-expand-lg navbar-light sticky-top" style="background-color: #e3f2fd;">        
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item active">
-                <a class="nav-link" href="#header">Home <span class="sr-only">(current)</span></a>
+	<nav class="navbar navbar-expand-lg navbar-light sticky-top" style="background-color: #e3f2fd;">
+		<div class="collapse navbar-collapse" id="navbarNav">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item active">
+					<a class="nav-link" href="">Home <span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#about">About me</a>
@@ -24,23 +25,30 @@
                 <a class="nav-link" href="#skills">Skills</a>
               </li>
               <li class="nav-item">
+                <a class="nav-link" href="#mapsection">Travel map</a>
+              </li>
+              <li class="nav-item">
                 <a class="nav-link" href="#media">Media</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#contact">Contact</a>
               </li>
             </ul>
-              <form class="form-inline">
-                <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" id="text-to-find">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit" onclick="javascript: FindOnPage('text-to-find',true); return false;">Search</button>
-              </form>
+              <div id="contacts">
+                <a href="https://github.com/Mh-Tahir">
+                    <img alt="Github" src="https://image.flaticon.com/icons/svg/25/25231.svg" />
+                </a>
+                <a href="https://www.instagram.com/thrm__/">
+                    <img alt="Instagram" src="https://image.flaticon.com/icons/svg/2111/2111463.svg"/>
+                </a>
+            </div>
           </div>
         </nav>
 
         <!-- header start -->
-        <div id="header" class="sect bg-light" >
-            <img alt="" class="img-circle" src="https://instagram.fala3-1.fna.fbcdn.net/v/t51.2885-19/s320x320/27574203_406235569815814_1119491304535883776_n.jpg?_nc_ht=instagram.fala3-1.fna.fbcdn.net&_nc_ohc=k21bLdevQvwAX9rhYSN&oh=848e02c7ea00e036c584abe3feaed319&oe=5F27FB4B">
-            <p>Tahir</p>
+        <div id="header" class="sect bg-light">
+            <img alt="Portrait" class="img-circle" src="https://instagram.fala3-1.fna.fbcdn.net/v/t51.2885-19/s320x320/27574203_406235569815814_1119491304535883776_n.jpg?_nc_ht=instagram.fala3-1.fna.fbcdn.net&_nc_ohc=k21bLdevQvwAX9rhYSN&oh=848e02c7ea00e036c584abe3feaed319&oe=5F27FB4B">
+            <p style="color:white">Tahir</p>
         </div>
         <!-- header end -->
         
@@ -53,64 +61,7 @@
             <p class="quote">"Declare variables, not war"</p>
         </div>
         <!-- About Me section end -->
-        
-        <!-- My Schedule section start 
-        <div class="sect" id="schedule">
-            <h1><span>My Coding Schedule</span></h1>
-            <table>
-                <tr>
-                    <th>Day</th>
-                    <th>Mon</th>
-                    <th>Tue</th>
-                    <th>Wed</th>
-                    <th>Thu</th>
-                    <th>Fri</th>
-                </tr>
-                <tr>
-                    <td>8-8:30</td>
-                    <td class="selected">Learn</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>9-10</td>
-                    <td></td>
-                    <td class="selected">Code</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>1-1:30</td>
-                    <td></td>
-                    <td></td>
-                    <td class="selected">Debug</td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>3:45-5</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td class="selected">Refactor</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>6-6:15</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td class="selected">Discuss</td>
-                </tr>
-            </table>
-        </div>
-         My Schedule section end -->
-        
-        
+
         <!-- My Skills section start -->
         <div class="sect bg-light" id="skills">
             <h4><span>My Skills</span></h4>
@@ -127,12 +78,19 @@
             </ul>
         </div>
         <!-- My Skills section end -->
-        
-        
+
+        <!--Map section start-->
+        <div class="sect bg-light" id="mapsection">
+            <h4><span>My Travel Map</span></h4>
+        <div class="sect bg-light" id="map"></div> 
+        </div>
+        <!--Map section end-->
+
          <!-- Media section start -->
         <div class="sect bg-light" id="media">
             <h4><span>My Media</span></h4>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/APWhx97QvxE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="600" height="315" src="https://www.youtube.com/embed/APWhx97QvxE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="600" height="315" src="https://www.youtube.com/embed/CgdjESROiww" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
         <!-- Media section end -->
         
@@ -148,21 +106,7 @@
             </form>
         </div>
         <!-- Form section end -->
-        
-        <!-- Contacts section start -->
-        <div class="sect bg-light" id="contacts">
-            <h4><span>Follow Me</span></h4>
-            <div>
-                <a href="https://github.com/Mh-Tahir">
-                    <img alt="Github" src="https://image.flaticon.com/icons/svg/25/25231.svg" />
-                </a>
-                <a href="https://www.instagram.com/thrm__/">
-                    <img alt="Instagram" src="https://image.flaticon.com/icons/svg/2111/2111463.svg"/>
-                </a>
-            </div>
-        </div>
-        <!-- Contacts section end -->
-        
+                
         <div class="copyright">
             &copy; 2020 My Blog. All rights reserved.
         </div>
@@ -170,5 +114,6 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
         </script>
+        <script src="script.js"></script>
     </body>
 </html>
