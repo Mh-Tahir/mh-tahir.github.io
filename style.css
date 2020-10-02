@@ -1,50 +1,191 @@
-body {
-  padding-top: 56px;
+:root {
+  --primary-color: rgb(255, 92, 92);
+  --primary-variant: #ff2d2d;
+  --secondary-color: #333;
+  --on-primary: rgb(250, 250, 250);
+  --on-background: rgb(66, 66, 66);
+  --on-background-alt: rgba(66, 66, 66, 0.7);
+  --background: rgb(255, 255, 255);
+  --box-shadow: 0 5px 20px 1px rgba(0, 0, 0, 0.5);
 }
+
+[data-theme="dark"] {
+  --primary-color: rgb(150, 65, 255);
+  --primary-variant: #6c63ff;
+  --secondary-color: #fff;
+  --on-primary: #000;
+  --on-background: rgba(255, 255, 255, 0.9);
+  --on-background-alt: #333;
+  --background: #121212;
+}
+
+body {
+  box-sizing: border-box;
+  color: var(--on-background);
+  background-color: var(--background);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%239C92AC' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+}
+
+section {
+  padding-top: 2rem;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: var(--on-background-alt);
+  background-color: var(--background);
+  margin-bottom: 3rem;
+  border-radius: 2%;
+}
+
+h1 {
+  color: var(--primary-color);
+  padding-bottom: 2rem;
+}
+
+p {
+  font-size: 1.5rem;
+}
+
+.head {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+nav,
+footer,
+.btn {
+  background-color: var(--secondary-color);
+  color: var(--on-primary);
+}
+
+a {
+  color: var(--on-primary);
+}
+
+h4 a,
+a:hover,
+.btn:hover {
+  color: var(--primary-color);
+}
+
+#info,
+ul {
+  color: var(--secondary-color);
+}
+
+nav-item:hover,
+navbar-brand:hover,
+btn:hover {
+  color: var(--on-background);
+}
+
+/* Dark Mode Toggle */
+.theme-switch-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.theme-switch-wrapper span {
+  margin-right: 10px;
+  font-size: 1.5rem;
+}
+
+.theme-switch {
+  display: inline-block;
+  height: 28px;
+  position: relative;
+  width: 58px;
+  margin: 0;
+}
+
+.theme-switch input {
+  display: none;
+}
+
+.slider {
+  background: var(--primary-color);
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: 0.4s;
+}
+
+.slider::before {
+  background: #fff;
+  bottom: 4px;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 6px;
+  position: absolute;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background: var(--primary-color);
+}
+
+input:checked + .slider::before {
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 28px;
+}
+
+.slider.round::before {
+  border-radius: 50%;
+}
+
+fas {
+  background-color: white;
+}
+
+/* Dark Mode Toggle End */
+
+/* .flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
 
 .portarait {
-  height: 80vh;
-}
-
-#contacts img {
-  height: 50px;
-  width: 50px;
-  margin-left: 7px;
-  margin-right: 7px;
+  height: 25rem;
 }
 
 #contacts a {
   text-decoration: none;
 }
 
-#contacts img:hover {
-  opacity: 0.8;
-}
-
-#contacts {
-  text-align: center;
-}
-
-#map {
-  height: 400px;
-  width: 100%;
-}
-
-.nav-item:hover,
+/* .nav-item:hover,
 .navbar-brand:hover {
   transform: scale(1.1);
-}
+} */
 
-iframe,
+/* iframe,
 audio {
   margin: auto auto;
   border: 5px solid #777;
+} */
+
+/* #home {
+  background-image: url(./spb1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+} */
+
+.fab {
+  font-size: 5rem;
+  margin: 1rem 5rem;
+  cursor: pointer;
+  color: var(--primary-variant);
 }
 
-.carousel-control-prev-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
-}
-
-.carousel-control-next-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+.fab:hover {
+  color: var(--on-background);
 }
