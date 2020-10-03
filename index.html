@@ -1,12 +1,9 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html>
   <head>
     <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <title>Личный сайт</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TM</title>
     <link rel="icon" type="image/png" href="./favicon.jpg" />
     <link
       rel="stylesheet"
@@ -28,9 +25,14 @@
 
   <body>
     <!-- Navigation -->
-    <nav class="navbar fixed-top navbar-expand-lg fixed-top">
+    <nav class="navbar navbar-expand-lg fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="./index.html"><strong>Тахир</strong></a>
+        <a class="navbar-brand" href="./index.html" lang="ru"
+          ><strong>Тахир</strong></a
+        >
+        <a class="navbar-brand hidden" href="./index.html" lang="en"
+          ><strong>Tahir</strong></a
+        >
         <div class="theme-switch-wrapper">
           <span id="toggle-icon">
             <i class="fas fa-sun"></i>
@@ -54,10 +56,12 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link" href="#about">Обо мне</a>
+              <a class="nav-link" href="#about" lang="ru">Обо мне</a>
+              <a class="nav-link hidden" href="#about" lang="en">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#skills">Навыки</a>
+              <a class="nav-link" href="#skills" lang="ru">Навыки</a>
+              <a class="nav-link hidden" href="#skills" lang="en">Skills</a>
             </li>
             <!-- <li class="nav-item">
               <a class="nav-link" href="#education">Образование</a>
@@ -66,46 +70,51 @@
               <a class="nav-link" href="#work">Опыт</a>
             </li> -->
             <li class="nav-item">
-              <a class="nav-link" href="#projects">Портфолио</a>
+              <a class="nav-link" href="#projects" lang="ru">Портфолио</a>
+              <a class="nav-link hidden" href="#projects" lang="en"
+                >Portfolio</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#contacts">Контакты</a>
+              <a class="nav-link" href="#contacts" lang="ru">Контакты</a>
+              <a class="nav-link hidden" href="#contacts" lang="en">Contacts</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="en.html">EN</a>
+            <li class="nav-item lang-wrapper">
+              <select class="language">
+                <option value="RU">RU</option>
+                <option value="EN">EN</option>
+              </select>
             </li>
           </ul>
         </div>
       </div>
     </nav>
 
-    <!-- Page Content -->
+    <!-- Content -->
     <!-- <section id="home">
       <div></div>
     </section> -->
 
-    <!-- Page Content -->
+    <!-- Content -->
     <section id="about" class="container">
-      <!-- Page Heading -->
-      <!-- <h1 data-aos="fade-down" class="mt-4 mb-3">Обо мне</h1> -->
-
-      <!-- Intro Content -->
       <div class="row">
         <div
           data-aos="fade-right"
           class="col-lg-8 col-md-8 col-sm-8 d-flex align-items-center"
         >
-          <p id="info">
-            Привет! Я <strong>Тахир Мухамедрахимов</strong> <br /><br />
+          <p id="info" lang="ru">
+            Привет! Я <strong class="name">Тахир Мухамедрахимов</strong>
+            <br /><br />
             Джуниор веб разработчик с опытом в аналитике <br />и управлении
             цепями поставок<br /><br /><br />
             <a class="btn btn-dark" href="#projects">Смотреть портфолио</a>
-
-            <!-- Have a Bachelor's Degree in Economics in Saint-Petersburg State
-            University. <br />
-            Currently studying web development in ITMO University. <br /><br />
-            Completed JetBrains Academy Web Developer courses and Frontend
-            Masters Bootcamp. -->
+          </p>
+          <p id="info" lang="en" class="hidden">
+            Hi! I'm <strong class="name">Tahir Muhamedrahimov</strong>
+            <br /><br />
+            Junior web developer with background in analytics <br />and supply
+            chain management<br /><br /><br />
+            <a class="btn btn-dark" href="#projects">Check out my portfolio</a>
           </p>
         </div>
         <div data-aos="fade-left" class="col-lg-4 col-md-4 col-sm-4">
@@ -116,16 +125,15 @@
           />
         </div>
       </div>
-      <!-- /.row -->
     </section>
     <!-- /.container -->
 
-    <!-- Page Content -->
+    <!-- Content -->
     <!-- <section id="about" class="container"> -->
-    <!-- Page Heading -->
+    <!-- Heading -->
     <!-- <h1 class="mt-4 mb-3">Education</h1> -->
 
-    <!-- Intro Content -->
+    <!-- Content -->
     <!-- <div class="row">
         <div class="col-lg-8 col-md-8 col-sm-8 flex">
           <p id="info">
@@ -141,16 +149,25 @@
     <!-- </section> -->
     <!-- /.container -->
 
-    <!-- Page Content -->
+    <!-- Content -->
     <section id="skills" class="container">
-      <!-- Page Heading -->
-      <h1 data-aos="zoom-in" class="mt-4 mb-3">Навыки</h1>
-
-      <!-- Intro Content -->
+      <!-- Heading -->
+      <div data-aos="zoom-in">
+        <h1 class="mt-4 mb-3" lang="ru">Навыки</h1>
+        <h1 class="mt-4 mb-3 hidden" lang="en">Skills</h1>
+      </div>
+      <!-- Content -->
       <div class="row">
         <div data-aos="fade-down-right" class="col-lg-6 col-md-6 col-sm-6">
-          <ul>
+          <ul lang="ru">
             <span class="head"> Мой стек:</span>
+            <li>HTML, CSS, Bootstrap<br /></li>
+            <li>JS, JQuery, Python <br /></li>
+            <li>Tilda, Wordpress <br /></li>
+            <li>MS Excel, VBA <br /></li>
+          </ul>
+          <ul class="hidden" lang="en">
+            <span class="head"> My skills:</span>
             <li>HTML, CSS, Bootstrap<br /></li>
             <li>JS, JQuery, Python <br /></li>
             <li>Tilda, Wordpress <br /></li>
@@ -158,12 +175,19 @@
           </ul>
         </div>
         <div data-aos="fade-down-left" class="col-lg-6 col-md-6 col-sm-6">
-          <ul>
+          <ul lang="ru">
             <span class="head"> Знание языков:</span>
             <li>Русский - родной<br /></li>
             <li>Английский - IELTS 7.5<br /></li>
             <li>Арабский - B1<br /></li>
             <li>Татарский - A2 <br /></li>
+          </ul>
+          <ul class="hidden" lang="en">
+            <span class="head"> My languages:</span>
+            <li>Russian - Fluent<br /></li>
+            <li>English - IELTS 7.5<br /></li>
+            <li>Arabic - B1<br /></li>
+            <li>Tatar - A2 <br /></li>
           </ul>
         </div>
       </div>
@@ -171,11 +195,12 @@
     </section>
     <!-- /.container -->
 
-    <!-- Page Content -->
+    <!-- Content -->
     <section id="projects" class="container">
-      <h1 data-aos="fade-right" data-aos-delay="300" class="mt-4 mb-3">
-        Портфолио
-      </h1>
+      <div data-aos="fade-right" data-aos-delay="300">
+        <h1 class="mt-4 mb-3" lang="ru">Портфолио</h1>
+        <h1 class="mt-4 mb-3 hidden" lang="en">Portfolio</h1>
+      </div>
 
       <div class="row">
         <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
@@ -183,7 +208,7 @@
             <a href="https://mh-tahir.github.io/Web-Projects/Dog_App"
               ><img class="card-img-top" src="./dog_app.JPG" alt=""
             /></a>
-            <div class="card-body">
+            <div class="card-body" lang="ru">
               <h4 class="card-title">
                 <a href="https://mh-tahir.github.io/Web-Projects/Dog_App"
                   >Породы собак</a
@@ -194,6 +219,17 @@
                 изображение с помощью Dog API.
               </p>
             </div>
+            <div class="card-body hidden" lang="en">
+              <h4 class="card-title">
+                <a href="https://mh-tahir.github.io/Web-Projects/Dog_App"
+                  >Dog App</a
+                >
+              </h4>
+              <p class="card-text">
+                Choose your favourite breed to get a random picture of a dog
+                using Dog API.
+              </p>
+            </div>
           </div>
         </div>
         <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
@@ -201,17 +237,28 @@
             <a href="https://mh-tahir.github.io/Web-Projects/Game_Feed_Moles"
               ><img class="card-img-top" src="./moles.JPG" alt=""
             /></a>
-            <div class="card-body">
+            <div class="card-body" lang="ru">
               <h4 class="card-title">
                 <a
                   href="https://mh-tahir.github.io/Web-Projects/Game_Feed_Moles"
                   >Игра</a
                 >
               </h4>
-
               <p class="card-text">
                 Нужно накормить кротов, пока они не исчезли в норках. <br />
                 Королевские кроты дают двойные очки!
+              </p>
+            </div>
+            <div class="card-body hidden" lang="en">
+              <h4 class="card-title">
+                <a
+                  href="https://mh-tahir.github.io/Web-Projects/Game_Feed_Moles"
+                  >Feed Mole Game</a
+                >
+              </h4>
+              <p class="card-text">
+                Feed moles with worms to win the game. <br />
+                King moles give double score!
               </p>
             </div>
           </div>
@@ -221,7 +268,7 @@
             <a href="https://mh-tahir.github.io/Web-Projects/Piano"
               ><img class="card-img-top" src="./piano.JPG" alt=""
             /></a>
-            <div class="card-body">
+            <div class="card-body" lang="ru">
               <h4 class="card-title">
                 <a href="https://mh-tahir.github.io/Web-Projects/Piano"
                   >Виртуальное пианино</a
@@ -231,6 +278,17 @@
                 Игра на виртуальном пианино с помощью клавиатуры или мыши
               </p>
             </div>
+            <div class="card-body hidden" lang="en">
+              <h4 class="card-title">
+                <a href="https://mh-tahir.github.io/Web-Projects/Piano"
+                  >Virtual Piano</a
+                >
+              </h4>
+              <p class="card-text">
+                Click on the keys on the keyboard or on mouse to play the
+                virtual piano
+              </p>
+            </div>
           </div>
         </div>
         <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
@@ -238,7 +296,7 @@
             <a href="https://mh-tahir.github.io/Web-Projects/Quote_Generator"
               ><img class="card-img-top" src="./quote.JPG" alt=""
             /></a>
-            <div class="card-body">
+            <div class="card-body" lang="ru">
               <h4 class="card-title">
                 <a
                   href="https://mh-tahir.github.io/Web-Projects/Quote_Generator"
@@ -250,6 +308,17 @@
                 Твиттер
               </p>
             </div>
+            <div class="card-body hidden" lang="en">
+              <h4 class="card-title">
+                <a
+                  href="https://mh-tahir.github.io/Web-Projects/Quote_Generator"
+                  >Quote Generator</a
+                >
+              </h4>
+              <p class="card-text">
+                Click to generate random quote and post it to Twitter
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -257,7 +326,10 @@
     <!-- /.container -->
 
     <section id="contacts" class="container">
-      <h1 data-aos="flip-left" class="mt-4 mb-3">Контакты</h1>
+      <div data-aos="flip-left">
+        <h1 class="mt-4 mb-3" lang="ru">Контакты</h1>
+        <h1 class="mt-4 mb-3 hidden" lang="en">Contacts</h1>
+      </div>
       <div class="row social-icons">
         <a
           data-aos="flip-left"
@@ -293,7 +365,10 @@
     <!-- Footer -->
     <footer class="py-3">
       <div class="container">
-        <p class="m-0 text-center">Дизайн - Тахир Мухамедрахимов</p>
+        <p class="m-0 text-center" lang="ru">Дизайн - Тахир Мухамедрахимов</p>
+        <p class="m-0 text-center hidden" lang="en">
+          Designed by Tahir Muhamedrahimov
+        </p>
       </div>
       <!-- /.container -->
     </footer>
@@ -316,6 +391,8 @@
     ></script>
     <!-- AOS.js -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="script.js"></script>
+    <script src="switch.js"></script>
+    <script src="lang.js"></script>
+    <script src="aos.js"></script>
   </body>
 </html>

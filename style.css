@@ -19,6 +19,19 @@
   --background: #121212;
 }
 
+::-webkit-scrollbar {
+  width: 1em;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color);
+  outline: 5px solid var(--secondary-color);
+}
+
 body {
   box-sizing: border-box;
   color: var(--on-background);
@@ -60,6 +73,15 @@ footer,
   color: var(--on-primary);
 }
 
+select {
+  color: white;
+  background-color: var(--primary-color);
+}
+
+.name {
+  color: var(--primary-color);
+}
+
 a {
   color: var(--on-primary);
 }
@@ -79,6 +101,11 @@ nav-item:hover,
 navbar-brand:hover,
 btn:hover {
   color: var(--on-background);
+}
+
+.lang-wrapper {
+  display: flex;
+  align-items: center;
 }
 
 /* Dark Mode Toggle */
@@ -188,4 +215,8 @@ audio {
 
 .fab:hover {
   color: var(--on-background);
+}
+
+.hidden {
+  display: none;
 }
