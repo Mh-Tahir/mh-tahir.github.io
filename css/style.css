@@ -202,4 +202,17 @@ fas {
   background-color: white;
 }
 
+.navbar-toggler-right {
+  background-color: var(--primary-color);
+}
+
+.navbar-toggler-icon {
+  background-image: none;
+  color: var(--secondary-color);
+  font-size: 1.2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /*# sourceMappingURL=style.css.map */
