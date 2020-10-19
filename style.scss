@@ -5,35 +5,29 @@ html {
   --on-primary: #fff;
   --on-secondary: rgba(66, 66, 66, 0.7);
 }
-
-html[data-theme=dark] {
+html[data-theme="dark"] {
   --primary-color: rgb(150, 65, 255);
   --primary-variant: #6c63ff;
   --secondary-color: #fff;
   --on-primary: #000;
   --on-secondary: #333;
 }
-
 ::-webkit-scrollbar {
   width: 1em;
 }
-
 ::-webkit-scrollbar-track {
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
 }
-
 ::-webkit-scrollbar-thumb {
   background-color: var(--primary-color);
   outline: 5px solid var(--secondary-color);
 }
-
 body {
   box-sizing: border-box;
   color: var(--secondary-color);
   background-color: var(--on-primary);
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%239C92AC' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
 }
-
 section {
   padding-top: 2rem;
   min-height: 100vh;
@@ -46,123 +40,109 @@ section {
   margin-bottom: 3rem;
   border-radius: 2%;
 }
-
 h1 {
   color: var(--primary-color);
   padding-bottom: 2rem;
 }
-
 p {
   font-size: 1.5rem;
 }
-
 .head {
   font-size: 1.5rem;
   font-weight: 400;
 }
-
 nav {
   background-color: var(--secondary-color);
   color: var(--on-primary);
 }
-
 footer {
   background-color: var(--secondary-color);
   color: var(--on-primary);
 }
-
 .btn {
   background-color: var(--secondary-color);
   color: var(--on-primary);
+  &:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+  }
 }
-.btn:hover {
-  background-color: var(--primary-color);
-  border-color: var(--primary-color);
-}
-
 select {
   color: white;
   background-color: var(--primary-color);
 }
-
 .name {
   color: var(--primary-color);
 }
-
 a {
   color: var(--on-primary);
+  &:hover {
+    color: var(--primary-color);
+  }
 }
-a:hover {
-  color: var(--primary-color);
+h4 {
+  a {
+    color: var(--primary-color);
+  }
 }
-
-h4 a {
-  color: var(--primary-color);
-}
-
 #info {
   color: var(--secondary-color);
 }
-
 ul {
   color: var(--secondary-color);
 }
-
-nav-item:hover {
-  color: var(--secondary-color);
+nav-item {
+  &:hover {
+    color: var(--secondary-color);
+  }
 }
-
-navbar-brand:hover {
-  color: var(--secondary-color);
+navbar-brand {
+  &:hover {
+    color: var(--secondary-color);
+  }
 }
-
 .lang-wrapper {
   display: flex;
   align-items: center;
 }
-
 .portarait {
   height: 25rem;
 }
-
-#contacts a {
-  text-decoration: none;
+#contacts {
+  a {
+    text-decoration: none;
+  }
 }
-
 .fab {
   font-size: 5rem;
   margin: 1rem 5rem;
   cursor: pointer;
   color: var(--primary-variant);
+  &:hover {
+    color: var(--secondary-color);
+  }
 }
-.fab:hover {
-  color: var(--secondary-color);
-}
-
 .hidden {
   display: none;
 }
-
 .theme-switch-wrapper {
   display: flex;
   align-items: center;
+  span {
+    margin-right: 10px;
+    font-size: 1.5rem;
+  }
 }
-.theme-switch-wrapper span {
-  margin-right: 10px;
-  font-size: 1.5rem;
-}
-
 .theme-switch {
   display: inline-block;
   height: 28px;
   position: relative;
   width: 58px;
   margin: 0;
+  input {
+    display: none;
+  }
 }
-.theme-switch input {
-  display: none;
-}
-
 .slider {
   background: var(--primary-color);
   bottom: 0;
@@ -172,34 +152,35 @@ navbar-brand:hover {
   right: 0;
   top: 0;
   transition: 0.4s;
+  &::before {
+    background: #fff;
+    bottom: 4px;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 6px;
+    position: absolute;
+    transition: 0.4s;
+  }
 }
-.slider::before {
-  background: #fff;
-  bottom: 4px;
-  content: "";
-  height: 20px;
-  width: 20px;
-  left: 6px;
-  position: absolute;
-  transition: 0.4s;
+input {
+  &:checked {
+    + {
+      .slider {
+        background: var(--primary-color);
+        &::before {
+          transform: translateX(26px);
+        }
+      }
+    }
+  }
 }
-
-input:checked + .slider {
-  background: var(--primary-color);
-}
-input:checked + .slider::before {
-  transform: translateX(26px);
-}
-
 .slider.round {
   border-radius: 28px;
+  &::before {
+    border-radius: 50%;
+  }
 }
-.slider.round::before {
-  border-radius: 50%;
-}
-
 fas {
   background-color: white;
 }
-
-/*# sourceMappingURL=style.css.map */
