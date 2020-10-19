@@ -82,9 +82,13 @@ a {
 }
 
 h4 a,
-a:hover,
-.btn:hover {
+a:hover {
   color: var(--primary-color);
+}
+
+.btn:hover {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
 }
 
 #info,
@@ -93,8 +97,7 @@ ul {
 }
 
 nav-item:hover,
-navbar-brand:hover,
-btn:hover {
+navbar-brand:hover {
   color: var(--secondary-color);
 }
 
