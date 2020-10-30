@@ -30,7 +30,7 @@
         <a class="navbar-brand" href="./index.html" lang="ru"
           ><strong>Тахир</strong></a
         >
-        <a class="navbar-brand hidden" href="./index.html" lang="en"
+        <a class="navbar-brand d-none" href="./index.html" lang="en"
           ><strong>Tahir</strong></a
         >
         <div class="theme-switch-wrapper">
@@ -59,11 +59,11 @@
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
               <a class="nav-link" href="#about" lang="ru">Обо мне</a>
-              <a class="nav-link hidden" href="#about" lang="en">About</a>
+              <a class="nav-link d-none" href="#about" lang="en">About</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#skills" lang="ru">Навыки</a>
-              <a class="nav-link hidden" href="#skills" lang="en">Skills</a>
+              <a class="nav-link d-none" href="#skills" lang="en">Skills</a>
             </li>
             <!-- <li class="nav-item">
               <a class="nav-link" href="#education">Образование</a>
@@ -73,14 +73,14 @@
             </li> -->
             <li class="nav-item">
               <a class="nav-link" href="#projects" lang="ru">Портфолио</a>
-              <a class="nav-link hidden" href="#projects" lang="en"
+              <a class="nav-link d-none" href="#projects" lang="en"
                 >Portfolio</a
               >
             </li>
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <a class="nav-link" href="#contacts" lang="ru">Контакты</a>
-              <a class="nav-link hidden" href="#contacts" lang="en">Contacts</a>
-            </li>
+              <a class="nav-link d-none" href="#contacts" lang="en">Contacts</a>
+            </li> -->
             <li class="nav-item lang-wrapper">
               <select class="language">
                 <option value="RU">RU</option>
@@ -93,29 +93,51 @@
     </nav>
 
     <!-- Content -->
-    <section id="about" class="container">
+    <section id="about" class="container mb-4">
       <div class="row">
         <div
           data-aos="fade-right"
-          class="col-lg-8 col-md-8 col-sm-8 d-flex align-items-center"
+          class="col-lg-6 offset-lg-1 col-md-8 col-sm-12 d-flex align-items-center"
         >
-          <p id="info" lang="ru">
-            <strong class="name">Тахир Мухамедрахимов</strong>
-            <br /><br />
-            Веб разработчик с опытом в бизнес-аналитике <br /><br /><br />
-            <a class="btn btn-dark" href="#projects">Смотреть портфолио</a>
-          </p>
-          <p id="info" lang="en" class="hidden">
-            <strong class="name">Tahir Muhamedrahimov</strong>
-            <br /><br />
-            Web developer with background in business analytics
-            <br /><br /><br />
-            <a class="btn btn-dark" href="#projects">Check out my portfolio</a>
-          </p>
+          <div class="d-flex flex-column">
+            <p id="info" lang="ru">
+              <strong class="name">Тахир Мухамедрахимов</strong><br /><br />
+              <span>Веб разработчик <br />с опытом в бизнес-аналитике </span
+              ><br /><br />
+              <a class="btn btn-dark" href="#projects">Смотреть портфолио</a
+              ><br /><br />
+            </p>
+            <p id="info" lang="en" class="d-none">
+              <strong class="name">Tahir Muhamedrahimov</strong>
+              <br /><br />
+              <span
+                >Web developer <br />with background in business analytics</span
+              >
+              <br /><br />
+              <a class="btn btn-dark" href="#projects">Check out my portfolio</a
+              ><br /><br />
+            </p>
+            <span class="d-flex justify-content-between">
+              <a href="https://github.com/Mh-Tahir">
+                <i class="fab fa-github"></i
+              ></a>
+              <a
+                href="https://www.linkedin.com/in/tahir-muhamedrahimov-89a1421b8/"
+              >
+                <i class="fab fa-linkedin-in"></i
+              ></a>
+              <a href="https://www.facebook.com/fgh43624524565426/">
+                <i class="fab fa-facebook"></i
+              ></a>
+              <a href="https://www.instagram.com/webtahir/">
+                <i class="fab fa-instagram"></i
+              ></a>
+            </span>
+          </div>
         </div>
-        <div data-aos="fade-left" class="col-lg-4 col-md-4 col-sm-4">
+        <div data-aos="fade-left" class="col-lg-4 col-md-4 col-sm-4 p-3">
           <img
-            class="portarait img-fluid rounded mb-4"
+            class="portarait img-fluid rounded"
             src="images/photo.JPG"
             alt="Portrait"
           />
@@ -146,11 +168,11 @@
     <!-- /.container -->
 
     <!-- Content -->
-    <section id="skills" class="container">
+    <section id="skills" class="container mb-4">
       <!-- Heading -->
       <div data-aos="zoom-in">
         <h1 class="mt-4 mb-3" lang="ru">Навыки</h1>
-        <h1 class="mt-4 mb-3 hidden" lang="en">Skills</h1>
+        <h1 class="mt-4 mb-3 d-none" lang="en">Skills</h1>
       </div>
       <!-- Content -->
       <div class="row">
@@ -164,7 +186,7 @@
             <li>Tilda, Wordpress <br /></li>
             <li>MS Excel, VBA <br /></li>
           </ul>
-          <ul class="hidden" lang="en">
+          <ul class="d-none" lang="en">
             <span class="head"> My stack:</span>
             <li>HTML5, CSS3, SCSS, Bootstrap4<br /></li>
             <li>JS, JQuery <br /></li>
@@ -182,7 +204,7 @@
             <li>Арабский - B1<br /></li>
             <li>Татарский - A2 <br /></li>
           </ul>
-          <ul class="hidden" lang="en">
+          <ul class="d-none" lang="en">
             <span class="head"> My languages:</span>
             <li>Russian - native<br /></li>
             <li>English - IELTS 7.5<br /></li>
@@ -196,10 +218,10 @@
     <!-- /.container -->
 
     <!-- Content -->
-    <section id="projects" class="container">
+    <section id="projects" class="container mb-4">
       <div data-aos="fade-right" data-aos-delay="300">
         <h1 class="mt-4 mb-3" lang="ru">Портфолио</h1>
-        <h1 class="mt-4 mb-3 hidden" lang="en">Portfolio</h1>
+        <h1 class="mt-4 mb-3 d-none" lang="en">Portfolio</h1>
       </div>
 
       <div class="row">
@@ -215,11 +237,10 @@
                 >
               </h4>
               <p class="card-text">
-                При выборе породы собаки приложение загружает ее случайное
-                изображение с помощью Dog API.
+                Загрузите фото собак любой породы с помощью API
               </p>
             </div>
-            <div class="card-body hidden" lang="en">
+            <div class="card-body d-none" lang="en">
               <h4 class="card-title">
                 <a href="https://mh-tahir.github.io/Web-Projects/Dog_App"
                   >Dog App</a
@@ -227,7 +248,7 @@
               </h4>
               <p class="card-text">
                 Choose your favourite breed to get a random picture of a dog
-                using Dog API.
+                using API.
               </p>
             </div>
           </div>
@@ -245,11 +266,11 @@
                 >
               </h4>
               <p class="card-text">
-                Нужно накормить кротов, пока они не исчезли в норках. <br />
-                Королевские кроты дают двойные очки!
+                Накормите кротов, пока они не исчезли. <br />
+                Королевские кроты дают двойные очки
               </p>
             </div>
-            <div class="card-body hidden" lang="en">
+            <div class="card-body d-none" lang="en">
               <h4 class="card-title">
                 <a
                   href="https://mh-tahir.github.io/Web-Projects/Game_Feed_Moles"
@@ -257,8 +278,8 @@
                 >
               </h4>
               <p class="card-text">
-                Feed moles with worms to win the game. <br />
-                King moles give double score!
+                Feed the moles before they leave. <br />
+                King moles give double scores
               </p>
             </div>
           </div>
@@ -274,20 +295,15 @@
                   >Виртуальное пианино</a
                 >
               </h4>
-              <p class="card-text">
-                Игра на виртуальном пианино с помощью клавиатуры или мыши
-              </p>
+              <p class="card-text">Игра на виртуальном пианино</p>
             </div>
-            <div class="card-body hidden" lang="en">
+            <div class="card-body d-none" lang="en">
               <h4 class="card-title">
                 <a href="https://mh-tahir.github.io/Web-Projects/Piano"
                   >Virtual Piano</a
                 >
               </h4>
-              <p class="card-text">
-                Click on the keys on the keyboard or on mouse to play the
-                virtual piano
-              </p>
+              <p class="card-text">Play the virtual piano</p>
             </div>
           </div>
         </div>
@@ -304,11 +320,10 @@
                 >
               </h4>
               <p class="card-text">
-                Генератор случайных афоризмов с возможностью публикации в
-                Твиттер
+                Генератор случайных афоризмов с публикацией в Твиттер
               </p>
             </div>
-            <div class="card-body hidden" lang="en">
+            <div class="card-body d-none" lang="en">
               <h4 class="card-title">
                 <a
                   href="https://mh-tahir.github.io/Web-Projects/Quote_Generator"
@@ -316,7 +331,7 @@
                 >
               </h4>
               <p class="card-text">
-                Click to generate random quote and post it to Twitter
+                Random quote generator with posting on Twitter
               </p>
             </div>
           </div>
@@ -325,10 +340,10 @@
     </section>
     <!-- /.container -->
 
-    <section id="contacts" class="container">
+    <!-- <section id="contacts" class="container">
       <div data-aos="flip-left">
         <h1 class="mt-4 mb-3" lang="ru">Контакты</h1>
-        <h1 class="mt-4 mb-3 hidden" lang="en">Contacts</h1>
+        <h1 class="mt-4 mb-3 d-none" lang="en">Contacts</h1>
       </div>
       <div class="row social-icons">
         <a
@@ -360,15 +375,27 @@
           <i class="fab fa-linkedin-in"></i>
         </a>
       </div>
-    </section>
+    </section> -->
 
     <!-- Footer -->
     <footer class="py-3">
-      <div class="container">
-        <p class="m-0 text-center" lang="ru">Дизайн - Тахир Мухамедрахимов</p>
-        <p class="m-0 text-center hidden" lang="en">
-          Designed by Tahir Muhamedrahimov
-        </p>
+      <div class="container d-flex justify-content-between">
+        <strong lang="ru">Тахир Мухамедрахимов</strong>
+        <strong class="d-none" lang="en">Tahir Muhamedrahimov</strong>
+        <span>
+          <a href="https://github.com/Mh-Tahir">
+            <i class="fab fa-github"></i
+          ></a>
+          <a href="https://www.linkedin.com/in/tahir-muhamedrahimov-89a1421b8/">
+            <i class="fab fa-linkedin-in"></i
+          ></a>
+          <a href="https://www.facebook.com/fgh43624524565426/">
+            <i class="fab fa-facebook"></i
+          ></a>
+          <a href="https://www.instagram.com/webtahir/">
+            <i class="fab fa-instagram"></i
+          ></a>
+        </span>
       </div>
       <!-- /.container -->
     </footer>

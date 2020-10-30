@@ -15,7 +15,7 @@ html[data-theme="dark"] {
 }
 
 ::-webkit-scrollbar {
-  width: 1em;
+  width: 1rem;
 }
 
 ::-webkit-scrollbar-track {
@@ -24,7 +24,6 @@ html[data-theme="dark"] {
 
 ::-webkit-scrollbar-thumb {
   background-color: var(--primary-color);
-  outline: 5px solid var(--secondary-color);
 }
 
 body {
@@ -35,15 +34,13 @@ body {
 }
 
 section {
-  /* margin-top: 2rem; */
-  /* min-height: 100vh; */
+  min-height: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   color: var(--on-secondary);
   background-color: var(--on-primary);
-  margin-bottom: 3rem;
   border-radius: 2%;
 }
 
@@ -121,26 +118,20 @@ navbar-brand:hover {
   align-items: center;
 }
 
-.portarait {
-  /* height: 25rem; */
-}
-
 #contacts a {
   text-decoration: none;
 }
 
 .fab {
-  font-size: 5rem;
-  margin: 1rem 5rem;
+  font-size: 1rem;
   cursor: pointer;
   color: var(--primary-variant);
 }
+#about .fab {
+  font-size: 3rem;
+}
 .fab:hover {
   color: var(--secondary-color);
-}
-
-.hidden {
-  display: none;
 }
 
 .theme-switch-wrapper {

@@ -1,3 +1,1 @@
-# blog
-
 Personal webpage
