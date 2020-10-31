@@ -1,17 +1,15 @@
 html {
   --primary-color: rgb(255, 92, 92);
   --primary-variant: #ff2d2d;
-  --secondary-color: #333;
-  --on-primary: #fff;
-  --on-secondary: rgba(66, 66, 66, 0.7);
+  --second-color: #333;
+  --third-color: #fff;
 }
 
 html[data-theme="dark"] {
   --primary-color: rgb(150, 65, 255);
   --primary-variant: #6c63ff;
-  --secondary-color: #fff;
-  --on-primary: #000;
-  --on-secondary: #333;
+  --second-color: #fff;
+  --third-color: #000;
 }
 
 ::-webkit-scrollbar {
@@ -28,8 +26,8 @@ html[data-theme="dark"] {
 
 body {
   box-sizing: border-box;
-  color: var(--secondary-color);
-  background-color: var(--on-primary);
+  color: var(--second-color);
+  background-color: var(--third-color);
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%239C92AC' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
 }
 
@@ -39,8 +37,7 @@ section {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  color: var(--on-secondary);
-  background-color: var(--on-primary);
+  background-color: var(--third-color);
   border-radius: 2%;
 }
 
@@ -59,18 +56,18 @@ p {
 }
 
 nav {
-  background-color: var(--secondary-color);
-  color: var(--on-primary);
+  background-color: var(--second-color);
+  color: var(--third-color);
 }
 
 footer {
-  background-color: var(--secondary-color);
-  color: var(--on-primary);
+  background-color: var(--second-color);
+  color: var(--third-color);
 }
 
 .btn {
-  background-color: var(--secondary-color);
-  color: var(--on-primary);
+  background-color: var(--second-color);
+  color: var(--third-color);
 }
 .btn:hover {
   background-color: var(--primary-color);
@@ -86,8 +83,12 @@ select {
   color: var(--primary-color);
 }
 
+.card-text {
+  color: #333;
+}
+
 a {
-  color: var(--on-primary);
+  color: var(--third-color);
 }
 a:hover {
   color: var(--primary-color);
@@ -97,20 +98,16 @@ h4 a {
   color: var(--primary-color);
 }
 
-#info {
-  color: var(--secondary-color);
-}
-
 ul {
-  color: var(--secondary-color);
+  color: var(--second-color);
 }
 
 nav-item:hover {
-  color: var(--secondary-color);
+  color: var(--second-color);
 }
 
 navbar-brand:hover {
-  color: var(--secondary-color);
+  color: var(--second-color);
 }
 
 .lang-wrapper {
@@ -131,7 +128,7 @@ navbar-brand:hover {
   font-size: 3rem;
 }
 .fab:hover {
-  color: var(--secondary-color);
+  color: var(--primary-color);
 }
 
 .theme-switch-wrapper {
@@ -199,7 +196,7 @@ fas {
 
 .navbar-toggler-icon {
   background-image: none;
-  color: var(--secondary-color);
+  color: var(--second-color);
   font-size: 1.2em;
   display: flex;
   align-items: center;
