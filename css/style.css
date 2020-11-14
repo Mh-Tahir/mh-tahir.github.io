@@ -57,12 +57,15 @@ p {
 }
 
 @media only screen and (min-width: 768px) {
-  p {
-    font-size: 1.4rem;
+  #about p {
+    font-size: 2rem;
   }
   .head {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     font-weight: 400;
+  }
+  #about a {
+    font-size: 1.8rem;
   }
   #about .fab {
     font-size: 3rem;
