@@ -16,8 +16,9 @@
       crossorigin="anonymous"
     />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
-      href="https://fonts.googleapis.com/css?family=Handlee"
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
       rel="stylesheet"
     />
     <link href="css/style.css" rel="stylesheet" type="text/css" />
@@ -118,9 +119,9 @@
             <a href="https://www.facebook.com/fgh43624524565426/">
               <i class="fab fa-facebook"></i
             ></a>
-            <a href="https://www.instagram.com/webtahir/">
-              <i class="fab fa-instagram"></i
-            ></a>
+            <a href="mailto:tahirmr@mail.ru">
+              <i class="fas fa-envelope"></i>
+            </a>
           </p>
         </div>
         <div data-aos="fade-right" class="col-lg-4 col-md-4 col-sm-4 p-3">
@@ -136,10 +137,9 @@
     <!-- Portfolio -->
     <section id="projects" class="container mb-4">
       <div data-aos="fade-right" data-aos-delay="300">
-        <h1 class="mt-4 mb-3" lang="ru">Портфолио</h1>
-        <h1 class="mt-4 mb-3 d-none" lang="en">Portfolio</h1>
+        <h1 class="mt-4" lang="ru">Портфолио</h1>
+        <h1 class="mt-4 d-none" lang="en">Portfolio</h1>
       </div>
-
       <div class="row">
         <div class="col-lg-4 col-md-4 col-sm-6 portfolio-item">
           <div data-aos="fade-right" data-aos-delay="300" class="card h-100">
@@ -225,7 +225,9 @@
                   >Приложение про собак</a
                 >
               </h4>
-              <p class="card-text">Загрузите фото собаки любой породы с API</p>
+              <p class="card-text">
+                Выберите породу и загрузите фото собаки с помощью API
+              </p>
             </div>
             <div class="card-body d-none" lang="en">
               <h4 class="card-title">
@@ -234,8 +236,7 @@
                 >
               </h4>
               <p class="card-text">
-                Choose your favourite breed to get a random picture of a dog
-                using API
+                Choose any breed and get a picture of the dog using API
               </p>
             </div>
           </div>
@@ -252,7 +253,7 @@
                   >Игра</a
                 >
               </h4>
-              <p class="card-text">Накормите кротов, пока они не исчезли</p>
+              <p class="card-text">Накормите животных, пока они не исчезли</p>
             </div>
             <div class="card-body d-none" lang="en">
               <h4 class="card-title">
@@ -261,10 +262,7 @@
                   >Feed Mole Game</a
                 >
               </h4>
-              <p class="card-text">
-                Feed the moles before they leave. <br />
-                King moles give double scores
-              </p>
+              <p class="card-text">Feed the animals before they leave</p>
             </div>
           </div>
         </div>
@@ -297,38 +295,48 @@
     <!-- Skills -->
     <section id="skills" class="container mb-4">
       <div data-aos="fade-right">
-        <h1 class="mt-4 mb-3" lang="ru">Навыки</h1>
-        <h1 class="mt-4 mb-3 d-none" lang="en">Skills</h1>
+        <h1 class="mt-4 pb-lg-3 pb-0" lang="ru">Навыки</h1>
+        <h1 class="mt-4 pb-lg-3 pb-0 d-none" lang="en">Skills</h1>
       </div>
-      <div class="row">
-        <div data-aos="fade-right" class="col-lg-6 col-md-6 col-sm-6">
-          <ul>
-            <span lang="ru" class="head"> Стек:</span>
-            <span lang="en" class="d-none head"> Stack:</span>
-            <li>HTML5, CSS3, SCSS, Bootstrap4<br /></li>
-            <li>JavaScript, JQuery <br /></li>
-            <li>Python, SQL, PHP <br /></li>
-            <li>Git, Linux, Docker, Gulp <br /></li>
-            <li>CMS Tilda, Wordpress <br /></li>
-            <li>MS Excel, VBA <br /></li>
-            <li>Adobe Photoshop <br /></li>
-          </ul>
+      <div class="row" data-aos="fade-right">
+        <div class="col-md-6 mb-lg-4">
+          <hr />
+          <h4 class="font-weight-bold" lang="ru">Фронтенд разработка</h4>
+          <h4 class="font-weight-bold d-none" lang="en">
+            Frontend development
+          </h4>
+          <p>HTML, CSS, Sass, Bootstrap, Javascript, jQuery, Gulp</p>
         </div>
-        <div data-aos="fade-right" class="col-lg-6 col-md-6 col-sm-6">
-          <ul lang="ru">
-            <span class="head"> Языки:</span>
-            <li>Русский - родной<br /></li>
-            <li>Английский - IELTS 7.5<br /></li>
-            <li>Арабский - B1<br /></li>
-            <li>Татарский - второй родной <br /></li>
-          </ul>
-          <ul class="d-none" lang="en">
-            <span class="head"> Languages:</span>
-            <li>Russian - native<br /></li>
-            <li>English - IELTS 7.5<br /></li>
-            <li>Arabic - B1<br /></li>
-            <li>Tatar - second native <br /></li>
-          </ul>
+        <div class="col-md-6 mb-lg-4">
+          <hr />
+          <h4 class="font-weight-bold" lang="ru">Веб разработка</h4>
+          <h4 class="font-weight-bold d-none" lang="en">Web development</h4>
+          <p>PHP, Git, Docker</p>
+        </div>
+        <div class="col-md-6 mb-lg-4">
+          <hr />
+          <h4 class="font-weight-bold" lang="ru">CMS и Веб дизайн</h4>
+          <h4 class="font-weight-bold d-none" lang="en">CMS and Web design</h4>
+          <p>Wordpress, Tilda, Adobe Photoshop, Figma</p>
+        </div>
+        <div class="col-md-6 mb-lg-4">
+          <hr />
+          <h4 class="font-weight-bold" lang="ru">Аналитика</h4>
+          <h4 class="font-weight-bold d-none" lang="en">Analytics</h4>
+          <p>MS Excel, VBA Macros, Python, SQL</p>
+        </div>
+        <div class="col-md-12 mb-lg-4">
+          <hr />
+          <h4 class="font-weight-bold" lang="ru">Языки</h4>
+          <h4 class="font-weight-bold d-none" lang="en">Languages</h4>
+          <p lang="ru">
+            Английский - C1 (IELTS 7.5), Арабский - B2, Русский - родной,
+            Татарский - второй родной
+          </p>
+          <p class="d-none" lang="en">
+            English - C1 (IELTS 7.5), Arabic - B2, Russian - native, Tatar -
+            second native
+          </p>
         </div>
       </div>
     </section>
@@ -348,9 +356,7 @@
           <a href="https://www.facebook.com/fgh43624524565426/">
             <i class="fab fa-facebook"></i
           ></a>
-          <a href="https://www.instagram.com/webtahir/">
-            <i class="fab fa-instagram"></i
-          ></a>
+          <a href="mailto:tahirmr@mail.ru"> <i class="fas fa-envelope"></i></a>
         </span>
       </div>
     </footer>
